@@ -1,0 +1,121 @@
+:root {
+    --color-background: #0b0d17; /* Space-themed dark background */
+    --color-text: #d0d6f9; /* Light text color */
+    --color-gray: #1c1f2e; /* Space-themed gray */
+    --color-highlight: #d0d6f9; /* Highlight color */
+    --color-active: #d1df0d; /* Active color */
+    --color-button-bg: #1c1f2e; /* Button background */
+    --color-button-text: #d0d6f9; /* Button text */
+    --color-button-hover-bg: #d0d6f9; /* Button hover background */
+    --color-button-hover-text: #1c1f2e; /* Button hover text */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.rating-card {
+    text-align: center;
+}
+
+.rating-card__items {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.item {
+    /* width: 40px;
+    height: 40px;
+    background-color: #1c1f2e; //Space-themed gray
+    border: 2px solid #d0d6f9; // Light border 
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    */
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: var(--color-gray);
+    -webkit-mask-image: url('assets/star.svg');
+    mask-image: url('assets/star.svg');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+.item:hover {
+    background-color: var(--color-highlight);
+    transform: scale(1.2);
+}
+
+.item--active {
+    background-color: var(--color-active);
+}
+
+.btn {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: var(--color-button-bg);
+    color: var(--color-button-text);
+    border: 2px solid var(--color-button-text);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--color-button-hover-bg);
+    color: var(--color-button-hover-text);
+    transform: scale(1.1);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 1024px) {
+    /* Tablet styles */
+    .rating-card__items {
+        gap: 8px;
+    }
+
+    .item {
+        width: 40px;
+        height: 40px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Mobile styles */
+    .rating-card__items {
+        gap: 5px;
+    }
+
+    .item {
+        width: 30px;
+        height: 30px;
+    }
+
+    .btn {
+        width: 71px;
+        height: 35px;
+        padding: 10px;
+    }
+}
