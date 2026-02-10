@@ -34,12 +34,10 @@ document.querySelectorAll('.item').forEach((item) => {
 
         currentValue = parseInt(position) + 1;
 
-        // Update the displayed selected rating
         document.getElementById('selected-rating').textContent = currentValue;
     });
 });
 
-// Reset button functionality
 const resetButton = document.getElementById('reset-rating');
 resetButton.addEventListener('click', () => {
     document.querySelectorAll('.item').forEach((item) => {
@@ -49,7 +47,6 @@ resetButton.addEventListener('click', () => {
     document.getElementById('selected-rating').textContent = 'None';
 });
 
-// Submit button functionality
 const submitButton = document.getElementById('submit-rating');
 submitButton.addEventListener('click', () => {
     if (currentValue === 0) {

@@ -4,6 +4,8 @@
 
 [Rating ⭐](https://axlgoze.github.io/Rating/)
 
+!["Rating app"](./assets/ratingApp.png)
+
 A simple and interactive rating component built with HTML, CSS, and JavaScript. This project allows users to visually select a rating from a predefined range, with a space-themed aesthetic. It demonstrates dynamic DOM manipulation and responsive design principles.
 
 **Tech Stack:**
