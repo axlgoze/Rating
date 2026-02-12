@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["main"] # Se ejecuta cada vez que subes cambios a main
+    branches: ["master"] # Se ejecuta cada vez que subes cambios a master
 
 permissions:
   contents: read
